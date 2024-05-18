@@ -3,11 +3,11 @@
 int sum(int, int); // declaration
 // sum(2,3) = 5;
 
-int koyena = 100; //main global variable
+int koyena = 100; // global variable
 
 int main()
 {
-    int koyena = -900; //global variable for fn main
+    int koyena = -900; // local variable for fn main
     {
         int koyena = 900;                                           // local variable
         printf("Koyena inside the block in main fn: %d\n", koyena); // 900
@@ -20,7 +20,7 @@ int main()
 
 int sum(int a, int b) // definition
 {
-    int Rajneesh = 69;
-    printf("Koyena variable inside sum: %d\n", koyena); // 900 -> 100
+    int Rajneesh = 69;                                  // local variable for sum
+    printf("Koyena variable inside sum: %d\n", koyena); // 100
     return b - a;                                       // 1
 }
